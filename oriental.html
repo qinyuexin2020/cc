@@ -73,7 +73,7 @@
           this.width = this.$container.width();
           this.height = this.$container.height();
           this.context = $('<canvas />')
-            .attr({ width: this.width, height: this.height })
+            .attr({ width:this.width , height:this.height})
             .appendTo(this.$container)
             .get(0)
             .getContext('2d');
@@ -336,12 +336,12 @@
             this.theta %= Math.PI * 2;
           }
           if (this.endPhi) {
-            if (this.rippleCount == this.MAX_RIPPLE_COUNT) {
+            if (this.rippleCount === this.MAX_RIPPLE_COUNT) {
               this.psi += this.dpsi;
               this.psi %= Math.PI * 2;
             }
           } else {
-            this.phi += Math.PI / (axis.y == this.thresholdY ? 200 : 500);
+            this.phi += Math.PI / (axis.y === this.thresholdY ? 200 : 500);
             this.phi %= Math.PI;
           }
           if (this.y <= -this.renderer.height * this.SURFACE_RATE) {

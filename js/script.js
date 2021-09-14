@@ -865,10 +865,10 @@ shape.init();
 shape.print("❤ ");
 
 /* 只需要修改这里的文字就行 */
-let arr = ["宝贝", "今天是我们相爱520天❤", "别眨眼哦~"];
+let arr = ["宝贝", "今天是我们相爱520天❤"];
 let i = -1;
 let time = setInterval(() => {
-  if (i != arr.length - 1) {
+  if (i !== arr.length - 1) {
     i++;
     shape.print(arr[i]);
   } else {
