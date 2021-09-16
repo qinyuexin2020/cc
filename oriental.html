@@ -5,6 +5,9 @@
     <title></title>
     <script src="js/jquery.min.js"></script>
     <link type="text/css" href="./css/style.css" rel="stylesheet" />
+    <link type="text/css" href="./css/style1.css" rel="stylesheet" />
+    <link type="text/css" href="./css/style2.css" rel="stylesheet" />
+    <link type="text/css" href="./css/style3.css" rel="stylesheet" />
     <style>
       html,
       body {
@@ -28,6 +31,7 @@
       <source src="renxi.mp3" type="audio/mp3" />
     </audio>
     <div id="jsi-cherry-container" class="container">
+
       <div class="box">
         <ul class="minbox">
           <li></li>
@@ -46,9 +50,83 @@
           <li></li>
         </ol>
       </div>
+
+      <div class="box1">
+        <ul class="minbox1">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <ol class="maxbox1">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+      </div>
+
+      <div class="box2">
+        <ul class="minbox2">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <ol class="maxbox2">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+      </div>
+
+      <div class="box3">
+        <ul class="minbox3">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <ol class="maxbox3">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+      </div>
+
+
+
+
     </div>
 
+    <div class="slide-list__previous" onclick="toPrevious()"></div>
+    <div class="slide-list__next" onclick="toNext()"></div>
+
     <script>
+      function toPrevious(){
+        console.log("跳转到上一页");
+        window.location.href = "index1.html";
+      };
+
+      function toNext(){
+        console.log("跳转到下一页");
+        window.location.href = "翻书7.html";
+      };
+
       var RENDERER = {
         INIT_CHERRY_BLOSSOM_COUNT: 30,
         MAX_ADDING_INTERVAL: 10,

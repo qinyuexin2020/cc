@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>祝福墙</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin:0;
+    }
+    body {
+        width:100%;
+        height:100%;
+        background-repeat: no-repeat;
+        background:url("./墙.jpg");
+    }
+
+    .note {
+        background: url(./纸2.png) no-repeat;
+        background-size: 100% 100%;
+        min-width: 55vw;
+        min-height: 30vw;
+        float: left;
+        position:absolute;
+        right: 50%;
+        padding-top: 4vw;
+        padding-bottom: 2vw;
+    }
+
+    span {
+        display: block;
+    }
+
+    .noteHeader {
+        padding-right: 7vw;
+        float: right;
+        padding-top: 6vw;
+    }
+
+
+    .noteHeader s {
+        text-decoration: none;
+        position: absolute;
+        text-align: center;
+        cursor: pointer;
+    }
+    div .noteContent {
+        position: relative;
+        top: 5.5vw;
+        left: 15vw;
+        width: 32vw;
+        font-size: 2.5vw;
+        text-align: center;
+
+        display: -webkit-box;
+        word-break: break-all;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+    }
+
+    div.noteName{
+        color: #C0F;
+        position: relative;
+        float: right;
+        top: 21vw;
+        font-size: 1.5vw;
+    }
+
+
+</style>
+<body>
+    <div class="content">
+
+    </div>
+
+
+<script>
+    //模拟数据库，获取信息
+    var messages = [
+        {"id": 1, "name": "mahu", "content": "今天你拿苹果支付了么", "time": "2016-02-17 00:00:00"},
+        {"id": 2, "name": "haha", "content": "今天天气不错，风和日丽的", "time": "2016-02-18 12:40:00"},
+        {"id": 3, "name": "jjjj", "content": "常要说的事儿是乐生于苦", "time": "2016-03-18 12:40:00"},
+        {"id": 4, "name": "9.8的妹纸", "content": "把朋友家厕所拉堵了 不敢出去 掏了半小时了都", "time": "2016-03-18 12:40:00"},
+        {"id": 5, "name": "雷锋ii.", "content": "元宵节快乐", "time": "2016-02-22 12:40:00"},
+        {"id": 6, "name": "哎呦哥哥.", "content": "据说今晚央视的元宵晚会导演和春晚导演是同一个人，真是躲得过初一，躲不过十五。", "time": "2016-02-22 01:30:00"},
+        {
+            "id": 7,
+            "name": "没猴哥，不春晚",
+            "content": "班主任:“小明，你都十二岁了，还是三年级，不觉得羞愧吗”？。小明:“一点也不觉得，老师你都四十多岁了，不也是年年在三年级混日子吗？羞愧的应该是你”。老师:111111111111111111111",
+            "time": "2016-02-22 01:30:00"
+        },
+        {"id": 8, "name": "哎呦杰杰.", "content": "真搞不懂你们地球人，月亮有什么好看的，全是坑，还是对面那哥们好看，", "time": "2016-02-22 01:30:00"},
+        {"id": 9, "name": "哎呦哎呦", "content": "今天哪里的烟花最好看！！？答：朋友圈。。。", "time": "2016-02-22 02:30:00"}
+    ];
+    var content = document.getElementsByClassName("content")[0];
+
+    for (var i = 0; i < messages.length; i++) {
+
+        content.innerHTML+=
+
+
+
+            '<div class="note">' +
+
+
+                '<div class="noteHeader">' +
+                    '<s><img src="关闭32.svg" alt="关闭" width="20vw" height="20vw"></s>' +
+
+                '</div>' +
+
+                '<div class="noteContent">' + messages[i].content + '</div>' +
+
+                '<div class="noteName">' +messages[i].name+'</div>' +
+
+
+        '</div>';
+    }
+    var divEles = content.children;
+    var zIndexValue = 0;
+    for (var i = 0; i < divEles.length; i++) {
+        divEles[i].style.top = randomTop() + "vw";
+        divEles[i].style.left = randomLeft() + "vw";
+        divEles[i].onclick = function () {
+            zIndexValue++;
+            this.style.zIndex = zIndexValue;
+        }
+        var closeEle = divEles[i].getElementsByTagName("s")[0];
+        closeEle.onclick = function () {
+            content.removeChild(this.parentNode.parentNode);
+        }
+    }
+
+    function randomTop() {
+        return parseInt(Math.random() * (150 - 10)+10);
+    }
+
+    function randomLeft() {
+        return parseInt(Math.random() * (+50 - +5) + +5);
+        // return parseInt(Math.random() * (96 - 40));
+    }
+</script>
+</body>
+</html>

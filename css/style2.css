@@ -10,7 +10,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100% 100%;
+
   position: absolute;
   margin-left: auto;
   margin-right: auto;
@@ -18,58 +18,7 @@ body {
 li {
   list-style: none;
 }
-
-
-.slide-list__next,
-.slide-list__previous{
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  margin-top: -25px;
-  width: 8vw;
-  height: 8vw;
-  text-align: center;
-  font-size: 6vw;
-  line-height: 6vw;
-  overflow: hidden;
-  border: 2px solid #ffffff;
-  box-sizing: border-box;
-  border-radius: 100%;
-  color: white;
-  cursor: pointer;
-  transition: opacity .5s;
-}
-
-.slide-list__previous {
-  left: 0;
-}
-
-.slide-list__next {
-  right: 0;
-}
-
-#my-slider:hover .slide-list__previous {
-  opacity: 1;
-}
-
-
-#my-slider:hover .slide-list__next {
-  opacity: 1;
-}
-
-.slide-list__previous:after {
-  content: '<';
-}
-
-.slide-list__next:after {
-  content: '>';
-}
-
-
-
-
-
-.box {
+.box2 {
   width: 200px;
   height: 200px;
   background-size: cover;
@@ -77,14 +26,14 @@ li {
   background-attachment: fixed;
 
   position: absolute;
-  margin-left: 45%;
-  top: 6%;
+  top:60%;
+  margin-left:30%;
 
   -webkit-transform-style: preserve-3d;
   -webkit-transform: rotateX(13deg);
   -webkit-animation: move 5s linear infinite;
 }
-.minbox {
+.minbox2 {
   width: 100px;
   height: 100px;
   position: absolute;
@@ -92,62 +41,62 @@ li {
   top: 30px;
   -webkit-transform-style: preserve-3d;
 }
-.minbox li {
+.minbox2 li {
   width: 100px;
   height: 100px;
   position: absolute;
   left: 0;
   top: 0;
 }
-.minbox li:nth-child(1) {
-  background: url(../img1/01.png) no-repeat 0 0;
+.minbox2 li:nth-child(1) {
+  background: url(../img3/01.png) no-repeat 0 0;
   -webkit-transform: translateZ(50px);
 }
-.minbox li:nth-child(2) {
-  background: url(../img1/02.png) no-repeat 0 0;
+.minbox2 li:nth-child(2) {
+  background: url(../img3/02.png) no-repeat 0 0;
   -webkit-transform: rotateX(180deg) translateZ(50px);
 }
-.minbox li:nth-child(3) {
-  background: url(../img1/03.png) no-repeat 0 0;
+.minbox2 li:nth-child(3) {
+  background: url(../img3/03.png) no-repeat 0 0;
   -webkit-transform: rotateX(-90deg) translateZ(50px);
 }
-.minbox li:nth-child(4) {
-  background: url(../img1/04.png) no-repeat 0 0;
+.minbox2 li:nth-child(4) {
+  background: url(../img3/04.png) no-repeat 0 0;
   -webkit-transform: rotateX(90deg) translateZ(50px);
 }
-.minbox li:nth-child(5) {
-  background: url(../img1/05.png) no-repeat 0 0;
+.minbox2 li:nth-child(5) {
+  background: url(../img3/05.png) no-repeat 0 0;
   -webkit-transform: rotateY(-90deg) translateZ(50px);
 }
-.minbox li:nth-child(6) {
-  background: url(../img1/06.png) no-repeat 0 0;
+.minbox2 li:nth-child(6) {
+  background: url(../img3/06.png) no-repeat 0 0;
   -webkit-transform: rotateY(90deg) translateZ(50px);
 }
-.maxbox li:nth-child(1) {
-  background: url(../img1/1.png) no-repeat 0 0;
+.maxbox2 li:nth-child(1) {
+  background: url(../img3/1.png) no-repeat 0 0;
   -webkit-transform: translateZ(50px);
 }
-.maxbox li:nth-child(2) {
-  background: url(../img1/2.png) no-repeat 0 0;
+.maxbox2 li:nth-child(2) {
+  background: url(../img3/2.png) no-repeat 0 0;
   -webkit-transform: translateZ(50px);
 }
-.maxbox li:nth-child(3) {
-  background: url(../img1/3.png) no-repeat 0 0;
+.maxbox2 li:nth-child(3) {
+  background: url(../img3/3.png) no-repeat 0 0;
   -webkit-transform: rotateX(-90deg) translateZ(50px);
 }
-.maxbox li:nth-child(4) {
-  background: url(../img1/4.png) no-repeat 0 0;
+.maxbox2 li:nth-child(4) {
+  background: url(../img3/4.png) no-repeat 0 0;
   -webkit-transform: rotateX(90deg) translateZ(50px);
 }
-.maxbox li:nth-child(5) {
-  background: url(../img1/5.png) no-repeat 0 0;
+.maxbox2 li:nth-child(5) {
+  background: url(../img3/5.png) no-repeat 0 0;
   -webkit-transform: rotateY(-90deg) translateZ(50px);
 }
-.maxbox li:nth-child(6) {
-  background: url(../img1/6.png) no-repeat 0 0;
+.maxbox2 li:nth-child(6) {
+  background: url(../img3/6.png) no-repeat 0 0;
   -webkit-transform: rotateY(90deg) translateZ(50px);
 }
-.maxbox {
+.maxbox2 {
   width: 800px;
   height: 400px;
   position: absolute;
@@ -155,7 +104,7 @@ li {
   top: -20px;
   -webkit-transform-style: preserve-3d;
 }
-.maxbox li {
+.maxbox2 li {
   width: 200px;
   height: 200px;
   background: #fff;
@@ -166,25 +115,25 @@ li {
   opacity: 0.2;
   -webkit-transition: all 1s ease;
 }
-.maxbox li:nth-child(1) {
+.maxbox2 li:nth-child(1) {
   -webkit-transform: translateZ(100px);
 }
-.maxbox li:nth-child(2) {
+.maxbox2 li:nth-child(2) {
   -webkit-transform: rotateX(180deg) translateZ(100px);
 }
-.maxbox li:nth-child(3) {
+.maxbox2 li:nth-child(3) {
   -webkit-transform: rotateX(-90deg) translateZ(100px);
 }
-.maxbox li:nth-child(4) {
+.maxbox2 li:nth-child(4) {
   -webkit-transform: rotateX(90deg) translateZ(100px);
 }
-.maxbox li:nth-child(5) {
+.maxbox2 li:nth-child(5) {
   -webkit-transform: rotateY(-90deg) translateZ(100px);
 }
-.maxbox li:nth-child(6) {
+.maxbox2 li:nth-child(6) {
   -webkit-transform: rotateY(90deg) translateZ(100px);
 }
-.box:hover ol li:nth-child(1) {
+.box2:hover ol li:nth-child(1) {
   -webkit-transform: translateZ(300px);
   width: 400px;
   height: 400px;
@@ -192,7 +141,7 @@ li {
   left: -100px;
   top: -100px;
 }
-.box:hover ol li:nth-child(2) {
+.box2:hover ol li:nth-child(2) {
   -webkit-transform: rotateX(180deg) translateZ(300px);
   width: 400px;
   height: 400px;
@@ -200,7 +149,7 @@ li {
   left: -100px;
   top: -100px;
 }
-.box:hover ol li:nth-child(3) {
+.box2:hover ol li:nth-child(3) {
   -webkit-transform: rotateX(-90deg) translateZ(300px);
   width: 400px;
   height: 400px;
@@ -208,7 +157,7 @@ li {
   left: -100px;
   top: -100px;
 }
-.box:hover ol li:nth-child(4) {
+.box2:hover ol li:nth-child(4) {
   -webkit-transform: rotateX(90deg) translateZ(300px);
   width: 400px;
   height: 400px;
@@ -216,7 +165,7 @@ li {
   left: -100px;
   top: -100px;
 }
-.box:hover ol li:nth-child(5) {
+.box2:hover ol li:nth-child(5) {
   -webkit-transform: rotateY(-90deg) translateZ(300px);
   width: 400px;
   height: 400px;
@@ -224,7 +173,7 @@ li {
   left: -100px;
   top: -100px;
 }
-.box:hover ol li:nth-child(6) {
+.box2:hover ol li:nth-child(6) {
   -webkit-transform: rotateY(90deg) translateZ(300px);
   width: 400px;
   height: 400px;
