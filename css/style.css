@@ -32,7 +32,7 @@ li {
   font-size: 6vw;
   line-height: 6vw;
   overflow: hidden;
-  border: 2px solid #ffffff;
+  border: 1.5px solid #ffffff;
   box-sizing: border-box;
   border-radius: 100%;
   color: white;
@@ -59,10 +59,12 @@ li {
 
 .slide-list__previous:after {
   content: '<';
+  font-size: 8vw;
 }
 
 .slide-list__next:after {
   content: '>';
+  font-size: 8vw;
 }
 
 

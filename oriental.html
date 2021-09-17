@@ -8,6 +8,7 @@
     <link type="text/css" href="./css/style1.css" rel="stylesheet" />
     <link type="text/css" href="./css/style2.css" rel="stylesheet" />
     <link type="text/css" href="./css/style3.css" rel="stylesheet" />
+    <title>❤</title>
     <style>
       html,
       body {
@@ -27,9 +28,9 @@
     </style>
   </head>
   <body>
-    <audio autoplay="autopaly">
-      <source src="renxi.mp3" type="audio/mp3" />
-    </audio>
+<!--    <audio autoplay="autopaly">-->
+<!--      <source src="renxi.mp3" type="audio/mp3" />-->
+<!--    </audio>-->
     <div id="jsi-cherry-container" class="container">
 
       <div class="box">
@@ -124,7 +125,7 @@
 
       function toNext(){
         console.log("跳转到下一页");
-        window.location.href = "翻书7.html";
+        window.location.href = "book.html";
       };
 
       var RENDERER = {
@@ -143,7 +144,7 @@
           ) {
             var box = document.querySelectorAll('.box')[0];
             console.log(box, '移动端');
-            box.style.marginTop = '65%';
+            box.style.marginTop = '55%';
           }
         },
         setParameters: function() {
@@ -188,7 +189,7 @@
               this.cherries.splice(i, 1);
             }
           }
-          if (--this.addingInterval == 0) {
+          if (--this.addingInterval === 0) {
             this.addingInterval = this.maxAddingInterval;
             this.cherries.push(new CHERRY_BLOSSOM(this, false));
           }
@@ -309,7 +310,7 @@
           var axis = this.getAxis();
 
           if (
-            axis.y == this.thresholdY &&
+            axis.y === this.thresholdY &&
             this.rippleCount < this.MAX_RIPPLE_COUNT
           ) {
             context.save();
